@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JS Calculator</title>
+    <link rel="shortcut icon" href="images/calculator-solid.svg" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1fe5cce7d5.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Add your website name or logo here -->
+    </header>
+    <nav>
+      <!-- Add your website navigation here -->
+    </nav>
+    <main>
+      <!-- Add your main content here -->
+      <div class="container">
+        <div class="grid">
+          <input type="text" id="display" name="display" value="0" readonly />
+
+          <input type="button" value="AC" id="clear" class="func" onclick="clearDisplay()" />
+          <input type="button" value="DE" id="de" class="func" onclick="clearEntry()" />
+          <input type="button" value="%" id="percent" class="func" onclick="handleOperator('%')" />
+          <input type="button" value="/" id="divide" class="operators" onclick="handleOperator('/')" />
+
+          <input type="button" value="7" id="seven" onclick="appendToDisplay('7')" />
+          <input type="button" value="8" id="eight" onclick="appendToDisplay('8')" />
+          <input type="button" value="9" id="nine" onclick="appendToDisplay('9')" />
+          <input type="button" value="*" id="multiply" class="operators" onclick="handleOperator('*')" />
+
+          <input type="button" value="4" id="four" onclick="appendToDisplay('4')" />
+          <input type="button" value="5" id="five" onclick="appendToDisplay('5')" />
+          <input type="button" value="6" id="six" onclick="appendToDisplay('6')" />
+          <input type="button" value="-" id="subtract" class="operators" onclick="handleOperator('-')" />
+
+          <input type="button" value="1" id="one" onclick="appendToDisplay('1')" />
+          <input type="button" value="2" id="two" onclick="appendToDisplay('2')" />
+          <input type="button" value="3" id="three" onclick="appendToDisplay('3')" />
+          <input type="button" value="+" id="add" class="operators" onclick="handleOperator('+')" />
+
+          <input type="button" value="0" id="zero" onclick="appendToDisplay('0')" />
+          <input type="button" value="." id="decimal" onclick="appendDecimal()" />
+          <input type="button" value="=" id="equals" class="operators" onclick="calculateResult()" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Add copyright notices and other footer content here -->
+    </footer>
+
+    <!-- Include your JavaScript files here -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

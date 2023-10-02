@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "display display display display"
+    "clear de divide percent"
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three add"
+    "zero zero decimal equals";
+  background-color: #1c1c1c;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+#display {
+  grid-area: display;
+  color: white;
+  background-color: #1c1c1c;
+  border: none;
+}
+
+#zero {
+  grid-area: zero;
+  width: 108px;
+  border-radius: 55px;
+}
+
+input[type="text"] {
+  margin-bottom: 10px;
+  display: flex;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 20px 0 0;
+}
+
+input[type="button"] {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  /* font-size: 15px; */
+  margin: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #505050;
+  color: white;
+  font-weight: bold;
+}
+
+input.operators {
+  background-color: #ff9500;
+}
+
+input.func {
+  background-color: #aaaaaa;
+  color: black;
+}
